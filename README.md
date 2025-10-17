@@ -127,4 +127,6 @@ app/build/outputs/apk/debug/app-debug.apk
    - AndroidX AppCompat
    - Material Components
    - Activity / Fragment KTX
-- **Diseño:** MaterialToolbar + NestedScrollView + LinearLayout  
+- **Diseño:** MaterialToolbar + NestedScrollView + LinearLayout
+
+---

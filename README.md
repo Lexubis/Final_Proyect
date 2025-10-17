@@ -89,7 +89,7 @@ startActivity(wifiIntent);
 
 ## 🖼️ Capturas de pantalla
 
-Guarda las imágenes en una carpeta `/screenshots` (en la raíz del proyecto) y referencia aquí:
+
 
 | Pantalla | Imagen |
 |-----------|--------|
@@ -98,7 +98,6 @@ Guarda las imágenes en una carpeta `/screenshots` (en la raíz del proyecto) y 
 | Perfil del usuario | ![perfil](screenshots/perfil.png) |
 | Vista App (Información) | ![app](screenshots/app.png) |
 
-> También puedes incluir un **GIF corto** (por ejemplo `screenshots/demo.gif`) mostrando la navegación general.
 
 ---
 
@@ -127,4 +126,6 @@ app/build/outputs/apk/debug/app-debug.apk
    - AndroidX AppCompat
    - Material Components
    - Activity / Fragment KTX
-- **Diseño:** MaterialToolbar + NestedScrollView + LinearLayout  
+- **Diseño:** MaterialToolbar + NestedScrollView + LinearLayout
+
+---

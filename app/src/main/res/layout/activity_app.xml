@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppActivity">
+
+    <!-- Barra superior (menú) -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/brand_primary"
+            android:title="Acerca de la App"
+            android:titleTextColor="@android:color/white"
+            app:titleCentered="true" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Contenido principal desplazable -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp">
+
+            <!-- Título -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aplicación desarrollada con Android Studio"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/text_main"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Descripción breve -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:text="
+Esta aplicación fue creada como demostración práctica utilizando Android Studio y componentes de Material Design.
+
+A continuación se describen brevemente las funcionalidades de los botones en la pantalla principal:
+
+- *Ir a Perfil:* abre una vista donde puedes ver o editar los datos del usuario.
+- *Abrir sitio web:* redirige al portal oficial de Santo Tomás.
+- *Enviar correo:* compone un correo a la dirección del usuario.
+- *Compartir texto:* te permite compartir un mensaje con otras apps.
+- *Abrir Cámara:* abre una actividad que utiliza la cámara del dispositivo.
+- *Abrir Configuración WiFi:* abre directamente los ajustes de red Wi‑Fi del sistema.
+- *Ir a Vista App:* muestra esta misma pantalla de información.
+"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

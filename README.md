@@ -1,151 +1,130 @@
-
-# 📱 Proyecto Android — App Multi‑Intents
-
-**Versión del proyecto:**1.0  
-**Versión mínima de Android:**Android7.0(API24)  
-**Versión de Gradle (AGP):**8.5.0  
-**IDE:**AndroidStudioGiraffeosuperior
-
----
-
-## 🧩 Resumen del proyecto
-
-Esta aplicación fue desarrollada en **AndroidStudio**, utilizando **JavayMaterialDesignComponents**.  
-Su objetivo es demostrar el uso de **intents implícitos y explícitos**, así como el manejo del **ciclo de actividades**, menús y permisos básicos.
-
-La app posee una pantalla principal (`HomeActivity`) desde donde se accede a distintas funcionalidades: perfil, cámara, enviar correo, navegador web, compartir texto y configuración de redWi‑Fi.  
-También incluye una pantalla informativa (`AppActivity`) que explica brevemente la estructura y propósito de la aplicación.
-
----
-
-## ⚙️ Intents implementados
-
-### 🔹 **Intentsimplícitos(5total)**
-
-| Descripción | Acción/URI | Cómoprobarlo |
-|--------------|--------------|----------------|
-| **Abrirsitioweb** | `Intent.ACTION_VIEW` +https://www.santotomas.cl | Pulsa **"Abrirsitioweb"**→se abre el navegador. |
-| **Enviarcorreo** | `Intent.ACTION_SENDTO` +`mailto:` | Pulsa **"Enviarcorreo"**→se abre la appdecorreo con los datos delusuario. |
-| **Compartirtexto** | `Intent.ACTION_SEND`(text/plain) | Pulsa **"Compartirtexto"**→elige una app(p.ej.WhatsApp). |
-| **Abrircámara** | `Intent.ACTION_IMAGE_CAPTURE` | Pulsa **"AbrirCámara"**→abre la cámara deldispositivo. |
-| **ConfiguraciónWi‑Fi** | `Settings.ACTION_WIFI_SETTINGS` | Pulsa **"AbrirConfiguraciónWi‑Fi"**→abre losajustesdelsistema. |
-
----
-
-### 🔹 **Intentsexplícitos(3total)**
-
-| Descripción | Destino | Cómoprobarlo |
-|--------------|----------|----------------|
-| **IraPerfil** | `PerfilActivity` | Pulsa **"IraPerfil(resultado)"**→editaelnombrey vuelvealHome. |
-| **IraVistaApp** | `AppActivity` | Pulsa **"IraVistaApp"**→muestrainformacióndelproyecto. |
-| **Menú→Perfil** | `PerfilActivity` | Abreelmenúsuperiory selecciona**Perfil**. |
-
----
-
-## 🧪 Pasos de prueba rápida
-
-1. **Compila y ejecuta la app** desde AndroidStudio o instala el APKdebug.
-2. En la pantalla de iniciodesesión (si aplica), accedeal**Home**.
-3. Prueba los botones uno por uno:
-
-   - **IraPerfil**→navegayregresacondatoseditados.
-   - **Abrirsitioweb**→abreunanuevapestañadelnavegador.
-   - **Enviarcorreo**→lanzaclientedecorreo.
-   - **Compartirtexto**→muestraelselectordelsistema.
-   - **AbrirCámara**→activalacámaradeldispositivo.
-   - **AbrirConfiguraciónWi‑Fi**→abrelosajustesdelsistema.
-   - **IraVistaApp**→muestrainformacióndelproyecto.
-
-4. Usa la barra superior (**menú⋮**) para accederaacciones adicionales.
-
----
-
-## 💻 Fragmentos de código clave
-
-**Intentexplícito→PerfilActivity**
-```java
-Intent i = new Intent(HomeActivity.this, PerfilActivity.class);
-i.putExtra("email_usuario", emailUsuario);
-editarPerfilLauncher.launch(i);
-Contraer
-readme.txt
-4 KB
-﻿
-momo de tuais
-Purtaco
-purtaco
-He/Him
- 
- 
-Trans male
-Constantly struggling
-Be gentle, I'm sensitive
 # 📱 Proyecto Android — App Multi‑Intents
 
 **Versión del proyecto:** 1.0  
 **Versión mínima de Android:** Android 7.0 (API 24)  
 **Versión de Gradle (AGP):** 8.5.0  
-**IDE:** Android Studio Giraffe o superior  
+**IDE:** Android Studio Giraffe o superior
 
 ---
 
 ## 🧩 Resumen del proyecto
 
-Esta aplicación fue desarrollada en **Android Studio**, utilizando **Java y Material Design Components**.  
+Esta aplicación fue desarrollada en **Android Studio**, utilizando **Java y Material Design Components**.  
 Su objetivo es demostrar el uso de **intents implícitos y explícitos**, así como el manejo del **ciclo de actividades**, menús y permisos básicos.
 
-La app posee una pantalla principal (`HomeActivity`) desde donde se accede a distintas funcionalidades: perfil, cámara, enviar correo, navegador web, compartir texto y configuración de red Wi‑Fi.  
+La app posee una pantalla principal (`HomeActivity`) desde donde se accede a distintas funcionalidades: perfil, cámara, enviar correo, navegador web, compartir texto y configuración de red Wi‑Fi.  
 También incluye una pantalla informativa (`AppActivity`) que explica brevemente la estructura y propósito de la aplicación.
 
 ---
 
 ## ⚙️ Intents implementados
 
-### 🔹 **Intents implícitos (5 total)**
+### 🔹 Intents implícitos (5 total)
 
-| Descripción | Acción / URI | Cómo probarlo |
+| Descripción | Acción / URI | Cómo probarlo |
 |--------------|--------------|----------------|
-| **Abrir sitio web** | `Intent.ACTION_VIEW` + https://www.santotomas.cl | Pulsa **"Abrir sitio web"** → se abre el navegador. |
-| **Enviar correo** | `Intent.ACTION_SENDTO` + `mailto:` | Pulsa **"Enviar correo"** → se abre la app de correo con los datos del usuario. |
-| **Compartir texto** | `Intent.ACTION_SEND` (text/plain) | Pulsa **"Compartir texto"** → elige una app (p.ej. WhatsApp). |
-| **Abrir cámara** | `Intent.ACTION_IMAGE_CAPTURE` | Pulsa **"Abrir Cámara"** → abre la cámara del dispositivo. |
-| **Configuración Wi‑Fi** | `Settings.ACTION_WIFI_SETTINGS` | Pulsa **"Abrir Configuración Wi‑Fi"** → abre los ajustes del sistema. |
+| **Abrir sitio web** | `Intent.ACTION_VIEW` + https://www.santotomas.cl | Pulsa **"Abrir sitio web"** para abrir el navegador. |
+| **Enviar correo** | `Intent.ACTION_SENDTO` + `mailto:` | Pulsa **"Enviar correo"** para abrir la app de correo con los datos del usuario. |
+| **Compartir texto** | `Intent.ACTION_SEND` (text/plain) | Pulsa **"Compartir texto"** y elige una aplicación (por ejemplo WhatsApp). |
+| **Abrir cámara** | `Intent.ACTION_IMAGE_CAPTURE` | Pulsa **"Abrir Cámara"** para abrir la cámara del dispositivo. |
+| **Configuración Wi‑Fi** | `Settings.ACTION_WIFI_SETTINGS` | Pulsa **"Abrir Configuración Wi‑Fi"** para ir a los ajustes del sistema. |
 
 ---
 
-### 🔹 **Intents explícitos (3 total)**
+### 🔹 Intents explícitos (3 total)
 
-| Descripción | Destino | Cómo probarlo |
+| Descripción | Destino | Cómo probarlo |
 |--------------|----------|----------------|
-| **Ir a Perfil** | `PerfilActivity` | Pulsa **"Ir a Perfil (resultado)"** → edita el nombre y vuelve al Home. |
-| **Ir a Vista App** | `AppActivity` | Pulsa **"Ir a Vista App"** → muestra información del proyecto. |
-| **Menú → Perfil** | `PerfilActivity` | Abre el menú superior y selecciona **Perfil**. |
+| **Ir a Perfil** | `PerfilActivity` | Pulsa **"Ir a Perfil (resultado)"**, edita el nombre y vuelve al Home. |
+| **Ir a Vista App** | `AppActivity` | Pulsa **"Ir a Vista App"** para ver información del proyecto. |
+| **Menú → Perfil** | `PerfilActivity` | Abre el menú superior y selecciona **Perfil**. |
 
 ---
-
 
 ## 🧪 Pasos de prueba rápida
 
-1. **Compila y ejecuta la app** desde Android Studio o instala el APK debug.  
-2. En la pantalla de inicio de sesión (si aplica), accede al **Home**.  
+1. **Compila y ejecuta la app** desde Android Studio o instala el APK debug.
+2. En la pantalla de inicio de sesión (si aplica), accede al **Home**.
 3. Prueba los botones uno por uno:
-
-   - **Ir a Perfil** → navega y regresa con datos editados.  
-   - **Abrir sitio web** → abre una nueva pestaña del navegador.  
-   - **Enviar correo** → lanza cliente de correo.  
-   - **Compartir texto** → muestra el selector del sistema.  
-   - **Abrir Cámara** → activa la cámara del dispositivo.  
-   - **Abrir Configuración Wi‑Fi** → abre los ajustes del sistema.  
-   - **Ir a Vista App** → muestra información del proyecto.  
-
-4. Usa la barra superior (**menú⋮**) para acceder a acciones adicionales.
+   - **Ir a Perfil:** navega y regresa con datos editados.
+   - **Abrir sitio web:** abre una nueva pestaña del navegador.
+   - **Enviar correo:** lanza la app de correo.
+   - **Compartir texto:** muestra el menú de compartir del sistema.
+   - **Abrir Cámara:** activa la cámara del dispositivo.
+   - **Abrir Configuración Wi-Fi:** abre los ajustes del sistema.
+   - **Ir a Vista App:** muestra información del proyecto.
+4. Usa la barra superior (menú ⋮) para acceder a opciones adicionales.
 
 ---
 
 ## 💻 Fragmentos de código clave
 
-**Intent explícito → PerfilActivity**
+**Intent explícito → PerfilActivity**
 ```java
 Intent i = new Intent(HomeActivity.this, PerfilActivity.class);
 i.putExtra("email_usuario", emailUsuario);
 editarPerfilLauncher.launch(i);
+```
+
+**Recepción de resultado (vuelta al Home)**
+```java
+private final ActivityResultLauncher<Intent> editarPerfilLauncher =
+    registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+        result -> {
+            if (result.getResultCode() == RESULT_OK &&
+                result.getData() != null) {
+                String nombre = result.getData().getStringExtra("nombre_editado");
+                tvBienvenida.setText("Hola, " + nombre);
+            }
+        });
+```
+
+**Intent implícito → Configuración Wi-Fi**
+```java
+Intent wifiIntent = new Intent(Settings.ACTION_WIFI_SETTINGS);
+startActivity(wifiIntent);
+```
+
+---
+
+## 🖼️ Capturas de pantalla
+
+Guarda las imágenes en una carpeta `/screenshots` (en la raíz del proyecto) y referencia aquí:
+
+| Pantalla | Imagen |
+|-----------|--------|
+| Inicio de sesión | ![login](screenshots/login.png) |
+| Menú principal | ![home](screenshots/home.png) |
+| Perfil del usuario | ![perfil](screenshots/perfil.png) |
+| Vista App (Información) | ![app](screenshots/app.png) |
+
+> También puedes incluir un **GIF corto** (por ejemplo `screenshots/demo.gif`) mostrando la navegación general.
+
+---
+
+## 📦 APK debug
+
+El archivo se genera automáticamente al compilar:
+
+```
+app/build/outputs/apk/debug/app-debug.apk
+```
+
+### 🔧 Compilación manual (Android Studio)
+
+1. En el menú: **Build → Build Bundle(s) / APK(s) → Build APK(s)**.
+2. Espera el mensaje: *“APK(s) generated successfully”*.
+3. Haz clic en “Locate” para abrir la carpeta que contiene tu `.apk`.
+
+---
+
+## 💡 Requisitos técnicos
+
+- **Lenguaje:** Java 17
+- **SDK mínimo:** 24 (Android 7.0)
+- **SDK de compilación:** 34
+- **Dependencias principales:**
+   - AndroidX AppCompat
+   - Material Components
+   - Activity / Fragment KTX
+- **Diseño:** MaterialToolbar + NestedScrollView + LinearLayout  
